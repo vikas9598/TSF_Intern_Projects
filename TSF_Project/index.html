@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="overlay" class="showOverlay" onclick="closeModal()"></div>
+    <section id="header">
+      <div class="logo">Banking System</div>
+      <div class="nav" id="Nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="customer.html">Customers</a></li>
+          <li><a href="#about">About</a></li>
+          <li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hero">
+      <div class="content">
+        <h1>TSF Bank</h1>
+        <h3>Welcome To TSF Bank</h3>
+        <p>
+          With a focus on customer satisfaction and cutting-edge technology, TSF
+          Bank is dedicated to helping individuals and businesses achieve their
+          financial goals.
+        </p>
+        <button>Know More</button>
+      </div>
+      <div class="img">
+        <img
+          src="/images/realtime-banking-FB.png"
+          width="800px"
+          height="400px"
+          alt=""
+        />
+      </div>
+    </section>
+    <section id="services">
+        <h1>  ---  Services  ---  </h1>
+        <div class="container">
+          <div class="card" id="btn">
+            <div class="text"><h2>PAY NOW <i class="fa-solid fa-arrow-right"></i> </h2></div>
+          </div>
+          <a href="customer.html">
+          <div class="card2">
+            <div class="text"><h2>Customers <i class="fa-solid fa-arrow-right"></i> </h2></div>
+          </div>
+          </a>
+
+        </div>
+    </section>
+    <div class="loginForm">
+      <span>&times;</span>
+      <form action="">
+        <h1 style="text-align: center;">PAY</h1>
+        
+        <input type="text" name="sender" id="receive" placeholder=" Enter Receiver's Unique ID">
+        <input type="text" name="amount" id="amounts" placeholder="Amount">
+        <button>SUBMIT</button>
+      </form>
+    </div>
+    
+    <footer>
+        © 2023 TSF Bank. All rights reserved 
+    </footer>
+    
+  </body>
+  <script>
+    function showModal(){
+  document.querySelector('.overlay').classList.add('showOverlay')
+  document.querySelector('.loginForm').classList.add('showLoginForm')
+  document.querySelector('#services').classList.add('noservice')
+}
+function closeModal(){
+  document.querySelector('.overlay').classList.remove('showOverlay')
+  document.querySelector('.loginForm').classList.remove('showLoginForm')
+  document.querySelector('#services').classList.remove('noservice')
+}
+
+var btn = document.querySelector("#btn");
+btn.addEventListener("click",showModal);
+var close = document.querySelector("span");
+close.addEventListener("click",closeModal);
+  </script>
+</html>
